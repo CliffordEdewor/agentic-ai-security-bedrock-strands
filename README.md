@@ -62,7 +62,7 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 ![Observability](screenshots/08-cloudwatch-genai-dashboard.png)
 
 ## 📚 Use Case
-This project demonstrates applied expertise in securing and deploying Agentic AI systems within cloud-native environments. It highlights capabilities in secure architecture design, identity and access management, API protection, and observability—key areas for protecting modern hybrid infrastructures and AI-driven applications.
+This project demonstrates applied expertise in securing and deploying Agentic AI systems within cloud-native environments. It highlights capabilities in secure architecture design, identity and access management, API protection, and observability, key areas for protecting modern hybrid infrastructures and AI-driven applications.
 
 ## 📄 License
 Educational and portfolio use only.
