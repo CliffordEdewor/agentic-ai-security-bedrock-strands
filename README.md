@@ -65,4 +65,4 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 This project demonstrates applied expertise in securing and deploying Agentic AI systems within cloud-native environments. It highlights capabilities in secure architecture design, identity and access management, API protection, and observability, key areas for protecting modern hybrid infrastructures and AI-driven applications.
 
 ## 📄 License
-Educational and portfolio use only.
+For educational and portfolio purposes, demonstrating continuous upskilling and professional growth in cloud security and cybersecurity.
