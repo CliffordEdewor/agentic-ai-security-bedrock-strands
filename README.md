@@ -1,6 +1,6 @@
 # Agentic AI Security at Scale with Strands Agents & Bedrock AgentCore
 
-Production-grade Agentic AI systems secured with AWS Cognito and MCP Gateway, demonstrating end-to-end secure design, deployment, and observability (BeSA Week 4).
+Production-grade Agentic AI systems secured with AWS Cognito JWT authentication and MCP Gateway. End-to-end secure design, automated deployment, and full observability using Strands Agents and Amazon Bedrock AgentCore.
 
 ## 🎯 Objectives
 - Build functional Strands Agents with Bedrock models and tools
@@ -63,7 +63,10 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 ![Observability](images/08-cloudwatch-genai-dashboard.png)
 
 ## 📚 Use Case
-This project demonstrates applied expertise in securing and deploying Agentic AI systems within cloud-native environments. It highlights capabilities in secure architecture design, identity and access management, API protection, and observability, key areas for protecting modern hybrid infrastructures and AI-driven applications.
+This project demonstrates applied expertise in designing and securing production-grade Agentic AI systems in cloud-native environments, with capabilities directly applicable to protecting hybrid IT/OT infrastructures and critical national infrastructure.
+
+## Acknowledgments
+Completed as part of BeSA Week 4: Building at Scale with Bedrock AgentCore.
 
 ## 📄 License
-For educational and portfolio purposes, demonstrating continuous upskilling and professional growth in cloud security and cybersecurity.
+For educational and portfolio purposes only.
