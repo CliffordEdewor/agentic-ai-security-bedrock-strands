@@ -65,7 +65,7 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 ## 📚 Use Case
 This project demonstrates applied expertise in designing and securing production-grade Agentic AI systems in cloud-native environments, with capabilities directly applicable to protecting hybrid IT/OT infrastructures and critical national infrastructure.
 
-## Acknowledgments
+## 🙏🏼 Acknowledgments
 Completed as part of BeSA Week 4: Building at Scale with Bedrock AgentCore.
 
 ## 📄 License
