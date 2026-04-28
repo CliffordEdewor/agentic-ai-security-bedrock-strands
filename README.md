@@ -60,22 +60,16 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 - Cognito • OpenAPI • MCP • Docker • ECR • CodeBuild • CloudWatch GenAI
 
 ## 📸 Implementation Evidence
-### 1. First Working Strands Agent
-![First Agent](images/00-first-agent-calculator.png)
-
-### 2. Secure Credentials with AgentCore Identity
+### 1. Secure Credentials with AgentCore Identity
 ![Secure Credentials](images/01-secure-credentials-identity.png)
 
-### 3. Cognito JWT Token Generation
+### 2. Cognito JWT Token Generation
 ![Cognito JWT](images/03-cognito-jwt-token.png)
 
-### 4. AgentCore Gateway with OpenAPI MCP
+### 3. AgentCore Gateway with OpenAPI MCP
 ![Gateway & MCP](images/04-openapi-mcp-gateway.png)
 
-### 5. Gateway Testing with Strands Agent
-![Gateway Testing](images/05-gateway-testing-with-strands.png)
-
-### 6. CloudWatch Observability Dashboard
+### 4. CloudWatch Observability Dashboard
 ![Observability](images/08-cloudwatch-genai-dashboard.png)
 
 ## Related Component
