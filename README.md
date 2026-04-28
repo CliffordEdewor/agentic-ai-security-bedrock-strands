@@ -1,12 +1,8 @@
-# Agentic AI Security at Scale with Strands Agents & Bedrock AgentCore
+# Agentic AI Security Architecture (AWS Bedrock + MCP Integration)
 
-Production-grade Agentic AI systems secured with AWS Cognito JWT authentication and MCP Gateway. End-to-end secure design, automated deployment, and full observability using Strands Agents and Amazon Bedrock AgentCore.
+This project demonstrates the design and implementation of a secure, cloud-native Agentic AI system using Amazon Bedrock AgentCore and Strands Agents.
 
-## 🎯 Objectives
-- Build functional Strands Agents with Bedrock models and tools
-- Implement secure credential management and JWT authentication
-- Create and test AgentCore Gateway with OpenAPI-to-MCP conversion
-- Deploy agents to Bedrock AgentCore Runtime with full observability
+It focuses on enforcing identity-driven access control, secure agent-to-tool communication (via MCP), and end-to-end observability for AI-driven workflows.
 
 ## 🖥️ Lab Environment & Requirements
 Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles.
@@ -19,13 +15,33 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 ## 🧩 Project Architecture & Workflow
 ![Deployment Architecture](images/06-deployment-architecture.png)
 
-## ⚙️ Key Implementation Steps
-- Created Strands Agents with custom tools and Bedrock models
-- Secured credentials using Bedrock AgentCore Identity
-- Implemented Cognito JWT authentication for gateway access
-- Built MCP tools automatically from OpenAPI specifications
-- Deployed to Bedrock AgentCore Runtime with Docker + ECR + CodeBuild
-- Enabled CloudWatch GenAI observability
+## 🔐 Security Architecture Highlights
+- Implemented Zero Trust access control using AWS Cognito (JWT-based authentication)  
+- Secured agent-to-tool communication using Model Context Protocol (MCP)  
+- Enforced least-privilege IAM roles across all system components  
+- Eliminated hard-coded secrets using managed identity and credential services  
+- Protected API access through AgentCore Gateway with controlled request validation
+
+## ⚙️ System Capabilities
+- Secure agent-to-tool interaction with structured and controlled execution  
+- Real-time API integration through MCP-enabled tool invocation  
+- End-to-end observability with CloudWatch for tracing and monitoring agent workflows  
+- Scalable deployment using Docker, Amazon ECR, and AWS CodeBuild  
+- Modular architecture supporting extensible AI agent workflows
+
+## 🧠 Design Considerations
+- Designed with a Zero Trust security model across distributed agent workflows  
+- Prioritized identity-driven access control over static credential usage  
+- Ensured modular architecture to support extensibility and integration  
+- Focused on observability to enable auditability of AI-driven actions  
+
+## 🎯 Implementation Overview
+- Developed Strands Agents integrated with Amazon Bedrock models and custom tools  
+- Implemented secure identity and credential management using AgentCore Identity  
+- Enforced JWT-based authentication via AWS Cognito for controlled gateway access  
+- Enabled structured agent-tool communication using MCP with OpenAPI integration  
+- Deployed system using Docker, Amazon ECR, and AWS CodeBuild  
+- Configured CloudWatch for real-time observability and monitoring  
 
 ## ⚡ Key Features
 - Secure JWT-based API gateway integration
@@ -34,10 +50,10 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 - Full session tracing and observability
 
 ## 📊 Outcomes & Results
-- Successfully deployed and tested agents with external API integration
-- Achieved secure authentication with zero hard-coded secrets
-- Demonstrated real-time gateway testing and observability
-- Skills now directly applied to cloud security and AI agent protection in critical infrastructure
+- Successfully deployed secure Agentic AI workflows with external API integration  
+- Achieved end-to-end authentication with zero hard-coded secrets  
+- Validated real-time agent execution with monitored and traceable interactions  
+- Demonstrated secure architecture patterns applicable to cloud and critical infrastructure environments  
 
 ## 🔧 Technologies & Tools
 - Strands Agents • Amazon Bedrock • Bedrock AgentCore (Identity, Browser, Runtime, Gateway)
@@ -62,11 +78,14 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 ### 6. CloudWatch Observability Dashboard
 ![Observability](images/08-cloudwatch-genai-dashboard.png)
 
+## Related Component
+This system includes secure agent-to-tool communication implemented using MCP.
+
+See implementation:
+https://github.com/CliffordEdewor/secure-mcp-agent-integration.git
+
 ## 📚 Use Case
 This project demonstrates applied expertise in designing and securing production-grade Agentic AI systems in cloud-native environments, with capabilities directly applicable to protecting hybrid IT/OT infrastructures and critical national infrastructure.
 
-## 🙏🏼 Acknowledgments
-Completed as part of BeSA Week 4: Building at Scale with Bedrock AgentCore.
-
 ## 📄 License
-For educational and portfolio purposes only.
+This project is provided for demonstration and portfolio purposes, showcasing applied implementation of secure Agentic AI systems.
