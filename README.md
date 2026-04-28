@@ -35,7 +35,7 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 - Ensured modular architecture to support extensibility and integration  
 - Focused on observability to enable auditability of AI-driven actions  
 
-## 🎯 Implementation Overview
+## 🛠️ Implementation Overview
 - Developed Strands Agents integrated with Amazon Bedrock models and custom tools  
 - Implemented secure identity and credential management using AgentCore Identity  
 - Enforced JWT-based authentication via AWS Cognito for controlled gateway access  
