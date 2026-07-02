@@ -4,6 +4,9 @@ This project demonstrates the design and implementation of a secure, cloud-nativ
 
 It focuses on enforcing identity-driven access control, secure agent-to-tool communication (via MCP), and end-to-end observability for AI-driven workflows.
 
+## Project Origin
+This project originated from hands-on laboratories completed during the BeSA Cloud Academy "Agentic AI on AWS" programme. It has since been independently extended into a security-focused reference implementation incorporating Zero Trust principles, Amazon Cognito JWT authentication, secure Model Context Protocol (MCP) integration, CloudWatch observability, least-privilege IAM controls, and production-oriented deployment patterns.
+
 ## 🖥️ Lab Environment & Requirements
 Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles.
 
@@ -14,6 +17,26 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 
 ## 🧩 Project Architecture & Workflow
 ![Deployment Architecture](images/06-deployment-architecture.png)
+
+## Architecture Decisions
+The architecture was designed to demonstrate secure deployment patterns for production-oriented Agentic AI systems.
+Key design decisions include:
+- **Amazon Cognito** was selected to provide standards-based JWT authentication and eliminate hard-coded credentials.
+- **Amazon Bedrock AgentCore Gateway** was used to enforce authenticated and controlled agent-to-tool communication through the Model Context Protocol (MCP).
+- **Least-privilege IAM roles** were implemented across all components to support a Zero Trust security model.
+- **CloudWatch Observability** was configured to provide runtime monitoring, execution tracing, and operational visibility.
+- **Docker** was adopted to enable consistent deployment across cloud environments.
+These decisions prioritise secure identity, controlled access, observability, and operational resilience for cloud-native Agentic AI systems.
+
+## Security Principles
+The implementation is guided by the following security principles:
+- Zero Trust architecture
+- Identity-first authentication
+- Least-privilege access control
+- Secure agent-to-tool communication
+- End-to-end observability
+- Elimination of embedded credentials
+- Defence in depth
 
 ## 🔐 Security Architecture Highlights
 - Implemented Zero Trust access control using AWS Cognito (JWT-based authentication)  
@@ -33,7 +56,46 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 - Designed with a Zero Trust security model across distributed agent workflows  
 - Prioritized identity-driven access control over static credential usage  
 - Ensured modular architecture to support extensibility and integration  
-- Focused on observability to enable auditability of AI-driven actions  
+- Focused on observability to enable auditability of AI-driven actions
+
+## Threat Model
+This implementation was designed to mitigate common security risks in Agentic AI systems, including:
+- Unauthorized agent-to-tool invocation
+- Prompt injection attacks
+- Credential leakage
+- Hard-coded secret exposure
+- Excessive IAM privileges
+- API abuse
+- Token replay attacks
+
+Security controls include:
+
+- JWT authentication via Amazon Cognito
+- Least-privilege IAM roles
+- Secure credential management
+- MCP Gateway validation
+- CloudWatch observability
+
+## Current Limitations
+This implementation is intended as a production-oriented security reference architecture rather than a complete enterprise deployment.
+Current limitations include:
+- Single-region deployment
+- No human-in-the-loop approval workflow
+- Limited AI guardrails and prompt filtering
+- No policy-based authorization engine
+- No automated security testing within the CI/CD pipeline
+
+These limitations provide opportunities for future enhancement while keeping the implementation focused on core security design principles.
+
+## Future Enhancements
+Planned enhancements include:
+- Amazon Bedrock Guardrails integration
+- Human-in-the-loop approval workflows
+- Policy-based authorization using Open Policy Agent (OPA)
+- AI Red Team testing
+- Automated security testing within CI/CD pipelines
+
+These enhancements will further strengthen the architecture for enterprise-scale Agentic AI deployments.
 
 ## 🛠️ Implementation Overview
 - Developed Strands Agents integrated with Amazon Bedrock models and custom tools  
