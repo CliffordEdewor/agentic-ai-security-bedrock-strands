@@ -1,5 +1,9 @@
 # Agentic AI Security Architecture (AWS Bedrock + MCP Integration)
 
+![AWS](https://img.shields.io/badge/AWS-Bedrock-orange)
+![Security](https://img.shields.io/badge/Security-Zero%20Trust-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 This project demonstrates the design and implementation of a secure, cloud-native Agentic AI system using Amazon Bedrock AgentCore and Strands Agents.
 
 It focuses on enforcing identity-driven access control, secure agent-to-tool communication (via MCP), and end-to-end observability for AI-driven workflows.
