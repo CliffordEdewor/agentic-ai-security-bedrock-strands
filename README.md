@@ -29,7 +29,7 @@ using Amazon Bedrock AgentCore Runtime.
 
 ### High-Level Security Architecture
 
-[Horizontal architecture diagram]
+[Project-solution-architecture](images/Project-solution-architecture.png)
 
 This diagram summarises the secure request flow implemented by the solution,
 from identity verification through runtime execution and observability.
