@@ -25,11 +25,8 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 This deployment illustrates how the solution is packaged and deployed
 using Amazon Bedrock AgentCore Runtime.
 
----
-
-### High-Level Security Architecture
-
-[Project-solution-architecture](images/Project-solution-architecture.png)
+## 🧩 Solution Architecture
+![Solution Architecture](images/project-solution-architecture.png)
 
 This diagram summarises the secure request flow implemented by the solution,
 from identity verification through runtime execution and observability.
