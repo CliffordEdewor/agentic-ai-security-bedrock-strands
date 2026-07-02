@@ -22,6 +22,18 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 ## 🧩 Project Architecture & Workflow
 ![Deployment Architecture](images/06-deployment-architecture.png)
 
+This deployment illustrates how the solution is packaged and deployed
+using Amazon Bedrock AgentCore Runtime.
+
+---
+
+### High-Level Security Architecture
+
+[Horizontal architecture diagram]
+
+This diagram summarises the secure request flow implemented by the solution,
+from identity verification through runtime execution and observability.
+
 ## Architecture Decisions
 The architecture was designed to demonstrate secure deployment patterns for production-oriented Agentic AI systems.
 Key design decisions include:
