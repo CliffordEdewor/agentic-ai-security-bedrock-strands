@@ -121,7 +121,7 @@ These enhancements will further strengthen the architecture for enterprise-scale
 ## ⚡ Key Features
 - Secure JWT-based API gateway integration
 - Zero-code MCP tool generation from OpenAPI
-- Production-ready credential management
+- Secure managed credential and identity management
 - Full session tracing and observability
 
 ## 📊 Outcomes & Results
@@ -154,7 +154,7 @@ See implementation:
 https://github.com/CliffordEdewor/secure-mcp-agent-integration.git
 
 ## 📚 Use Case
-This project demonstrates applied expertise in designing and securing production-grade Agentic AI systems in cloud-native environments, with capabilities directly applicable to protecting hybrid IT/OT infrastructures and critical national infrastructure.
+This project demonstrates applied expertise in designing and securing production-oriented Agentic AI security architectures in cloud-native environments, with security patterns applicable to enterprise, hybrid IT/OT and critical-infrastructure environments.
 
 ## 📄 License
 This project is provided for demonstration and portfolio purposes, showcasing applied implementation of secure Agentic AI systems.
