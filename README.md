@@ -156,6 +156,7 @@ Execution cell and runtime logs demonstrating secure JWT token generation withou
 
 ### 4. CloudWatch Observability Dashboard
 ![Observability](images/08-cloudwatch-genai-dashboard.png)
+Runtime Validation: CloudWatch recorded 124 traces across 2 sessions, with 0% errors and 0% throttling, confirming successful runtime execution.
 
 ## Related Component
 This system includes secure agent-to-tool communication implemented using MCP.
