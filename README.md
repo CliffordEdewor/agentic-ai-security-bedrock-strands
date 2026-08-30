@@ -22,24 +22,23 @@ Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles
 ## 🧩 Project Architecture & Workflow
 ![Deployment Architecture](images/06-deployment-architecture.png)
 
-This deployment illustrates how the solution is packaged and deployed
-using Amazon Bedrock AgentCore Runtime.
+The deployment demonstrates how the agent is containerised, packaged, and deployed as a managed runtime through Amazon Bedrock AgentCore.
 
 ## 🧩 Solution Architecture
 ![Solution Architecture](images/project-solution-architecture.png)
 
-This diagram summarises the secure request flow implemented by the solution,
-from identity verification through runtime execution and observability.
+This diagram summarises the secure request flow implemented by the solution, from identity verification and MCP validation through runtime execution and end-to-end observability.
 
-## Architecture Decisions
-The architecture was designed to demonstrate secure deployment patterns for production-oriented Agentic AI systems.
-Key design decisions include:
-- **Amazon Cognito** was selected to provide standards-based JWT authentication and eliminate hard-coded credentials.
-- **Amazon Bedrock AgentCore Gateway** was used to enforce authenticated and controlled agent-to-tool communication through the Model Context Protocol (MCP).
-- **Least-privilege IAM roles** were implemented across all components to support a Zero Trust security model.
-- **CloudWatch Observability** was configured to provide runtime monitoring, execution tracing, and operational visibility.
-- **Docker** was adopted to enable consistent deployment across cloud environments.
-These decisions prioritise secure identity, controlled access, observability, and operational resilience for cloud-native Agentic AI systems.
+## 🏗️ Architectural Design Decisions
+The architecture was designed around explicit security and operational requirements for a production-oriented Agentic AI system. Key design decisions include:
+
+- **Identity & Authentication:** **Amazon Cognito** was selected to provide standards-based JWT authentication and eliminate hard-coded credentials.
+- **Protocol Governance:** **Amazon Bedrock AgentCore Gateway** was used to enforce authenticated and controlled agent-to-tool communication through the Model Context Protocol (MCP).
+- **Trust Model:** Least-privilege **IAM roles** were implemented across system components to support a Zero Trust security model.
+- **Runtime Observability:** **CloudWatch Observability** was configured to provide runtime monitoring, execution tracing, and operational visibility.
+- **Containerised Deployment:** **Docker** was adopted to support consistent and reproducible deployment of the solution.
+
+These decisions prioritise secure identity, controlled access, end-to-end observability, and operational resilience for cloud-native Agentic AI systems.
 
 ## Security Principles
 The implementation is guided by the following security principles:
@@ -56,7 +55,7 @@ The implementation is guided by the following security principles:
 - Secured agent-to-tool communication using Model Context Protocol (MCP)  
 - Enforced least-privilege IAM roles across all system components  
 - Eliminated hard-coded secrets using managed identity and credential services  
-- Protected API access through AgentCore Gateway with controlled request validation
+- Protected external API access through AgentCore Gateway with controlled request validation
 
 ## ⚙️ System Capabilities
 - Secure agent-to-tool interaction with structured and controlled execution  
@@ -66,28 +65,32 @@ The implementation is guided by the following security principles:
 - Modular architecture supporting extensible AI agent workflows
 
 ## 🧠 Design Considerations
-- Designed with a Zero Trust security model across distributed agent workflows  
-- Prioritized identity-driven access control over static credential usage  
-- Ensured modular architecture to support extensibility and integration  
-- Focused on observability to enable auditability of AI-driven actions
+- **Zero Trust:** Applied explicit identity and least-privilege controls across distributed agent workflows.
+- **Identity-First Access:** Prioritized authenticated, token-based access over static credential usage.
+- **Modular Security Boundaries:** Separated agent execution, tool invocation, authentication, and observability components to support controlled integration.
+- **Operational Visibility:** Designed for runtime telemetry and traceability of agent-driven actions.
 
 ## Threat Model
-This implementation was designed to mitigate common security risks in Agentic AI systems, including:
-- Unauthorized agent-to-tool invocation
-- Prompt injection attacks
-- Credential leakage
-- Hard-coded secret exposure
-- Excessive IAM privileges
-- API abuse
-- Token replay attacks
+The implementation was designed to address security risks arising from authenticated agent execution, agent-to-tool communication, credential handling, and cloud resource access.
 
-Security controls include:
+**Primary threats considered:**
+
+- Unauthorized agent-to-tool invocation
+- Unauthenticated or improperly authenticated requests
+- Credential and secret exposure
+- Excessive IAM permissions
+- Uncontrolled external API/tool access
+- Insufficient runtime visibility and auditability
+- Token misuse within authenticated request flows
+
+**Corresponding security controls include:**
 
 - JWT authentication via Amazon Cognito
 - Least-privilege IAM roles
-- Secure credential management
-- MCP Gateway validation
-- CloudWatch observability
+- Managed credential and secret handling
+- AgentCore Gateway / MCP request validation
+- Controlled agent-to-tool communication
+- CloudWatch runtime observability and telemetry
 
 ## Current Limitations
 This implementation is intended as a production-oriented security reference architecture rather than a complete enterprise deployment.
@@ -98,41 +101,47 @@ Current limitations include:
 - No policy-based authorization engine
 - No automated security testing within the CI/CD pipeline
 
-These limitations provide opportunities for future enhancement while keeping the implementation focused on core security design principles.
+These limitations define clear areas for future enhancement while keeping the implementation focused on core security architecture and control validation.
 
 ## Future Enhancements
 Planned enhancements include:
 - Amazon Bedrock Guardrails integration
 - Human-in-the-loop approval workflows
 - Policy-based authorization using Open Policy Agent (OPA)
-- AI Red Team testing
+- AI red-team testing
 - Automated security testing within CI/CD pipelines
 
-These enhancements will further strengthen the architecture for enterprise-scale Agentic AI deployments.
+These enhancements would extend the reference architecture toward stronger governance, policy enforcement, adversarial validation, and enterprise-scale deployment.
 
 ## 🛠️ Implementation Overview
-- Developed Strands Agents integrated with Amazon Bedrock models and custom tools  
-- Implemented secure identity and credential management using AgentCore Identity  
-- Enforced JWT-based authentication via AWS Cognito for controlled gateway access  
-- Enabled structured agent-tool communication using MCP with OpenAPI integration  
-- Deployed system using Docker, Amazon ECR, and AWS CodeBuild  
-- Configured CloudWatch for real-time observability and monitoring  
+- **Developed** Strands Agents integrated with Amazon Bedrock models and custom tools.
+- **Implemented** managed identity and credential handling using AgentCore Identity.
+- **Enforced** JWT-based authentication through Amazon Cognito for controlled gateway access.
+- **Established** structured agent-to-tool communication using MCP with OpenAPI-integrated tools.
+- **Containerized and deployed** the solution using Docker, Amazon ECR, and AWS CodeBuild.
+- **Configured** Amazon CloudWatch observability for runtime monitoring, telemetry, and execution tracing.
 
 ## ⚡ Key Features
-- Secure JWT-based API gateway integration
-- Zero-code MCP tool generation from OpenAPI
-- Secure managed credential and identity management
-- Full session tracing and observability
+- **Identity-first API access** using JWT authentication.
+- **Controlled MCP tool invocation** through AgentCore Gateway.
+- **OpenAPI-to-MCP integration** for structured external tool access.
+- **Managed identity and credential handling** without embedded application secrets.
+- **Runtime telemetry and session tracing** through CloudWatch.
 
 ## 📊 Outcomes & Results
-- Successfully deployed secure Agentic AI workflows with external API integration  
-- Achieved end-to-end authentication with zero hard-coded secrets  
-- Validated real-time agent execution with monitored and traceable interactions  
-- Demonstrated secure architecture patterns applicable to cloud and critical infrastructure environments  
+- **Successfully deployed** an Agentic AI workflow with authenticated external API/tool integration.
+- **Validated end-to-end request execution** from authenticated client access through agent runtime and tool invocation.
+- **Verified runtime observability** through CloudWatch telemetry and execution monitoring.
+- **Demonstrated controlled agent-to-tool communication** through MCP and AgentCore Gateway.
+- **Demonstrated a reusable security architecture** combining identity, least-privilege access, controlled tool invocation, and runtime observability.
 
 ## 🔧 Technologies & Tools
-- Strands Agents • Amazon Bedrock • Bedrock AgentCore (Identity, Browser, Runtime, Gateway)
-- Cognito • OpenAPI • MCP • Docker • ECR • CodeBuild • CloudWatch GenAI
+- **Agentic AI:** Strands Agents, Amazon Bedrock
+- **AgentCore:** Runtime, Gateway, Identity
+- **Security:** Amazon Cognito, IAM, JWT, MCP
+- **Integration:** OpenAPI, external APIs/tools
+- **Deployment:** Docker, Amazon ECR, AWS CodeBuild
+- **Observability:** Amazon CloudWatch
 
 ## 📸 Implementation Evidence
 ### 1. Secure Credentials with AgentCore Identity
