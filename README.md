@@ -8,8 +8,8 @@ This project demonstrates the design and implementation of a secure, cloud-nativ
 
 It focuses on enforcing identity-driven access control, secure agent-to-tool communication (via MCP), and end-to-end observability for AI-driven workflows.
 
-## Project Origin
-This project originated from hands-on laboratories completed during the BeSA Cloud Academy "Agentic AI on AWS" programme. It has since been independently extended into a security-focused reference implementation incorporating Zero Trust principles, Amazon Cognito JWT authentication, secure Model Context Protocol (MCP) integration, CloudWatch observability, least-privilege IAM controls, and production-oriented deployment patterns.
+## 🔍 Project Origin & Evolution
+This project began as a hands-on laboratory implementation developed during the BeSA Cloud Academy “Agentic AI on AWS” programme. I independently evolved the baseline into a security-focused, cloud-deployed reference architecture, introducing Zero Trust principles, Amazon Cognito JWT authentication, secure Model Context Protocol (MCP) integration, least-privilege IAM controls, CloudWatch observability, and production-oriented deployment patterns, with the resulting architecture validated through live runtime execution.
 
 ## 🖥️ Lab Environment & Requirements
 Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles.
