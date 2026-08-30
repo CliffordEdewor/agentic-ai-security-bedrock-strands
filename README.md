@@ -149,6 +149,7 @@ These enhancements would extend the reference architecture toward stronger gover
 
 ### 2. Cognito JWT Token Generation
 ![Cognito JWT](images/03-cognito-jwt-token.png)
+Execution cell and runtime logs demonstrating secure JWT token generation without embedded application credentials.
 
 ### 3. AgentCore Gateway with OpenAPI MCP
 ![Gateway & MCP](images/04-openapi-mcp-gateway.png)
