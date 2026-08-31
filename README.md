@@ -159,13 +159,13 @@ Execution cell and runtime logs demonstrating secure JWT token generation withou
 Runtime Validation: CloudWatch recorded 124 traces across 2 sessions, with 0% errors and 0% throttling, confirming successful runtime execution.
 
 ## Related Component
-This system includes secure agent-to-tool communication implemented using MCP.
+This system includes secure agent-to-tool communication implemented using the Model Context Protocol (MCP), integrating the deployed AgentCore Gateway with external API capabilities.
 
-See implementation:
+**See implementation:**
 https://github.com/CliffordEdewor/secure-mcp-agent-integration.git
 
 ## 📚 Use Case
-This project demonstrates applied expertise in designing and securing production-oriented Agentic AI security architectures in cloud-native environments, with security patterns applicable to enterprise, hybrid IT/OT and critical-infrastructure environments.
+This project demonstrates applied security engineering for production-oriented Agentic AI architectures, combining authenticated API access, secure agent-to-tool communication, and cloud-native runtime controls. The security patterns are applicable to enterprise, hybrid IT/OT, and critical-infrastructure environments.
 
 ## 📄 License
 This project is provided for demonstration and portfolio purposes, showcasing applied implementation of secure Agentic AI systems.
