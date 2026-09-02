@@ -170,4 +170,4 @@ This project demonstrates applied security engineering for production-oriented A
 The security patterns demonstrated are applicable to enterprise, hybrid IT/OT, and critical-infrastructure environments where identity, controlled system integration, and runtime observability are important security requirements.
 
 ## 📄 License
-This project is provided for demonstration and portfolio purposes, showcasing applied implementation of secure Agentic AI systems.
+This project is provided for demonstration and portfolio purposes, documenting the applied engineering implementation of a secure Agentic AI system.
