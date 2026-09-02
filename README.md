@@ -6,10 +6,10 @@
 
 This project demonstrates the design and implementation of a secure, cloud-native Agentic AI system using Amazon Bedrock AgentCore and Strands Agents.
 
-It focuses on enforcing identity-driven access control, secure agent-to-tool communication (via MCP), and end-to-end observability for AI-driven workflows.
+It focuses on implementing identity-driven access control, secure agent-to-tool communication (via MCP), and end-to-end runtime observability.
 
 ## 🔍 Project Origin & Evolution
-This project began as a hands-on laboratory implementation developed during the BeSA Cloud Academy “Agentic AI on AWS” programme. I independently evolved the baseline into a security-focused, cloud-deployed reference architecture, introducing Zero Trust principles, Amazon Cognito JWT authentication, secure Model Context Protocol (MCP) integration, least-privilege IAM controls, CloudWatch observability, and production-oriented deployment patterns, with the resulting architecture validated through live runtime execution.
+This project began as a hands-on laboratory implementation developed during the BeSA Cloud Academy “Agentic AI on AWS” programme. I independently extended the baseline into a security-focused, cloud-deployed reference architecture, introducing Zero Trust principles, Amazon Cognito JWT authentication, secure Model Context Protocol (MCP) integration, least-privilege IAM controls, CloudWatch observability, and production-oriented deployment patterns, with the resulting architecture validated through live runtime execution.
 
 ## 🖥️ Lab Environment & Requirements
 Executed on a secure AWS EC2 instance (us-west-2) with least-privilege IAM roles.
@@ -51,11 +51,11 @@ The implementation is guided by the following security principles:
 - Defence in depth
 
 ## 🔐 Security Architecture Highlights
-- Implemented Zero Trust access control using AWS Cognito (JWT-based authentication)  
-- Secured agent-to-tool communication using Model Context Protocol (MCP)  
-- Enforced least-privilege IAM roles across all system components  
-- Eliminated hard-coded secrets using managed identity and credential services  
-- Protected external API access through AgentCore Gateway with controlled request validation
+- Implemented identity-driven access control using Amazon Cognito JWT authentication.
+- Secured agent-to-tool communication using the Model Context Protocol (MCP).
+- Applied least-privilege IAM roles to the AWS resources and services used by the implementation.
+- Eliminated hard-coded application credentials through managed identity and credential handling.
+- Controlled external API access through AgentCore Gateway with authenticated request handling.
 
 ## ⚙️ System Capabilities
 - Secure agent-to-tool interaction with structured and controlled execution  
@@ -71,7 +71,7 @@ The implementation is guided by the following security principles:
 - **Operational Visibility:** Designed for runtime telemetry and traceability of agent-driven actions.
 
 ## Threat Model
-The implementation was designed to address security risks arising from authenticated agent execution, agent-to-tool communication, credential handling, and cloud resource access.
+The security design considered risks arising from authenticated agent execution, agent-to-tool communication, credential handling, and cloud resource access.
 
 **Primary threats considered:**
 
@@ -149,14 +149,14 @@ These enhancements would extend the reference architecture toward stronger gover
 
 ### 2. Cognito JWT Token Generation
 ![Cognito JWT](images/03-cognito-jwt-token.png)
-Execution cell and runtime logs demonstrating secure JWT token generation without embedded application credentials.
+Execution output demonstrating JWT token generation using Amazon Cognito without embedding application credentials in the implementation.
 
 ### 3. AgentCore Gateway with OpenAPI MCP
 ![Gateway & MCP](images/04-openapi-mcp-gateway.png)
 
 ### 4. CloudWatch Observability Dashboard
 ![Observability](images/08-cloudwatch-genai-dashboard.png)
-Runtime Validation: CloudWatch recorded 124 traces across 2 sessions, with 0% errors and 0% throttling, confirming successful runtime execution.
+**Runtime validation:** CloudWatch recorded 124 traces across 2 sessions, with 0% errors and 0% throttling during the captured test period, providing evidence of successful runtime execution.
 
 ## Related Component
 This system includes secure agent-to-tool communication implemented using the Model Context Protocol (MCP), integrating the deployed AgentCore Gateway with external API capabilities.
@@ -165,7 +165,9 @@ This system includes secure agent-to-tool communication implemented using the Mo
 https://github.com/CliffordEdewor/secure-mcp-agent-integration.git
 
 ## 📚 Use Case
-This project demonstrates applied security engineering for production-oriented Agentic AI architectures, combining authenticated API access, secure agent-to-tool communication, and cloud-native runtime controls. The security patterns are applicable to enterprise, hybrid IT/OT, and critical-infrastructure environments.
+This project demonstrates applied security engineering for production-oriented Agentic AI architectures, combining identity-based authentication, controlled agent-to-tool communication, and cloud-native runtime controls.
+
+The security patterns demonstrated are applicable to enterprise, hybrid IT/OT, and critical-infrastructure environments where identity, controlled system integration, and runtime observability are important security requirements.
 
 ## 📄 License
 This project is provided for demonstration and portfolio purposes, showcasing applied implementation of secure Agentic AI systems.
