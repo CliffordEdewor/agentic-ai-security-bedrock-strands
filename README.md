@@ -156,7 +156,7 @@ Execution output demonstrating JWT token generation using Amazon Cognito without
 
 ### 4. CloudWatch Observability Dashboard
 ![Observability](images/08-cloudwatch-genai-dashboard.png)
-**Runtime validation:** CloudWatch recorded 124 traces across 2 sessions, with 0% errors and 0% throttling during the captured test period, providing evidence of successful runtime execution.
+**Runtime validation: CloudWatch recorded 124 traces across 2 sessions, with 0% errors and 0% throttling during the captured test period, providing evidence of successful runtime execution.**
 
 ## Related Component
 This system includes secure agent-to-tool communication implemented using the Model Context Protocol (MCP), integrating the deployed AgentCore Gateway with external API capabilities.
